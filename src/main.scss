@@ -1,0 +1,26 @@
+// Colors
+
+$primary: #ef5b4c;
+$secondary: #007bff;
+$background-1: #fff;
+$background-2: #f9f9f3;
+
+// Typography
+
+@mixin heading-1 {
+    line-height: 54px;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+@mixin heading-2 {
+    line-height: 29px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+@mixin paragraph {
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
