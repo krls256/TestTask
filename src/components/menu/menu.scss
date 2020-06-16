@@ -1,6 +1,11 @@
 @import '../../main.scss';
 
 .menu {
-    height: 60px;
+    background-color: $background-1;
+    position: sticky;
+    top: 0;
+    height: 40px;
     padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
 }

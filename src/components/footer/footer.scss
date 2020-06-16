@@ -1,0 +1,13 @@
+@import '../../main.scss'; 
+
+.footer {
+    height: 60px;
+    background-color: $background-1;
+    &__hr {
+        border-top: 1px solid #ececec;
+    }
+    &__paragraph {
+        @include paragraph;
+        text-align: center;
+    }
+}

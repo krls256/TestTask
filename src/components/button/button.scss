@@ -1,0 +1,27 @@
+@import '../../main.scss';
+
+.button {
+    display: block;
+    width: 210px;
+    height: 38px;
+    border-radius: 4px;
+    border: none;
+    background-color: $primary;
+    cursor: pointer;
+    color: #fefefe;
+    @include paragraph;
+    &:hover {
+        background-color: #ee3625;
+    }
+    &-disabled {
+        background-color: #aaa;
+        color: #555;
+        cursor: auto;
+        &:hover {
+            background-color: #aaa;
+        }
+    }
+    &-center {
+        margin: 0 auto;
+    }
+}

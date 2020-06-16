@@ -1,0 +1,61 @@
+@import '../../main.scss';
+
+.card {
+    width: 200px;
+    text-align: center;
+    margin: 0 30px;
+    &__img {
+        display: block;
+        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+    }
+    &__text {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #4c4b4b;
+        cursor: pointer;
+        @include paragraph;
+        &-tooltip {
+            padding: 5px 5px;
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.719);
+            color: #fefefe;
+            text-align: center;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            position: absolute;
+            z-index: 1;
+        }
+        &:hover &-tooltip{
+            visibility: visible;
+        }
+    }
+    &__name {
+        @include heading-2;
+        color: #212529;
+        margin-top: 20px;
+        margin-bottom: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &-tooltip {
+            padding: 5px 5px;
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.719);
+            color: #fefefe;
+            text-align: center;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            position: absolute;
+            z-index: 1;
+        }
+        &:hover &-tooltip{
+            visibility: visible;
+        }
+    }
+    
+
+}

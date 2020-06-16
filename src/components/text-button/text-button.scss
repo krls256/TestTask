@@ -1,0 +1,14 @@
+@import '../../main.scss';
+
+.text-button {
+    color: $primary;
+    @include paragraph;
+    cursor: pointer;
+    &:hover {
+        color: #ee3625;
+    }
+}
+
+a {
+    text-decoration: none;
+}

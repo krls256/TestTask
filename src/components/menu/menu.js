@@ -1,11 +1,15 @@
 import React from 'react';
-import 'menu.scss';
+import MenuList from '../menu-list';
+
+import './menu.scss';
+import logo from '../../images/logo.svg';
 
 const Menu = () => {
     return (
-        <div className='menu'>
-            <div className=''></div>
-        </div>
+        <nav className='menu'>
+            <img src={logo} alt='logo'/>
+            <MenuList/>
+        </nav>
     )
 }
 

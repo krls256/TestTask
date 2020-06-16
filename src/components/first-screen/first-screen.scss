@@ -1,0 +1,19 @@
+@import '../../main.scss';
+
+.first {
+    background: url(../../images/banner-photo.jpg) no-repeat center center/cover;
+    // min-height: 600px;
+    padding: 115px 30px;
+    &__header {
+        @include heading-1;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__paragraph {
+        margin-top: 37px;
+        margin-bottom: 39px;
+        width: 50%;
+        color: #fff;
+        @include paragraph;
+    }
+}

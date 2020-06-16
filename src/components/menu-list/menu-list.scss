@@ -1,0 +1,23 @@
+@import '../../main.scss';
+.menu__list {
+    list-style-type: none;
+    display: flex;
+    li {
+        margin-left: 30px;
+        cursor: pointer;
+        .active {
+            color: $secondary;
+        }
+        a {
+            
+            font-size: 14px;
+            font-weight: 400;
+            color: #212529;
+            text-decoration: none;
+            &:hover {
+                color: $primary;
+            }
+            
+        }
+    }
+}
