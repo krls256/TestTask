@@ -18,3 +18,5 @@ export const max = (payload) => ({
 });
 
 export const set_modal = (payload) => ({type: 'MODAL', payload});
+
+export const set_hidden = (payload) => ({type: 'HIDE', payload})

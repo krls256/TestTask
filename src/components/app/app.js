@@ -12,6 +12,7 @@ import './app.scss';
 import FourthScreen from '../fourth-screen/fourth-screen';
 import Footer from '../footer';
 import Modal from '../modal'
+import ExtraMenu from '../extra-menu';
 
 
 const App = ({more, max, getSize}) => {
@@ -25,13 +26,16 @@ const App = ({more, max, getSize}) => {
     return (
         <div className="app">
             <Modal/>
-            <div className='container'>
-            <Menu/>
-            <FirstScreen/>
-            <SecondScreen/>
-            <ThirdScreen/>
-            <FourthScreen/>
-            <Footer/>
+            <div className='subcontainer'>
+                <Menu/>
+                <ExtraMenu/>
+                <div className='container'>
+                <FirstScreen/>
+                <SecondScreen/>
+                <ThirdScreen/>
+                <FourthScreen/>
+                <Footer/>
+                </div>
             </div>
         </div>
     )

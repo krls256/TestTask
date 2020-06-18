@@ -1,0 +1,51 @@
+@import '../../main.scss';
+
+.extra-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .extra-menu {
+        transition: all .5s;
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, .5);
+        width: 100vw;
+        height: calc(100vh - 60px);
+        &__list {
+            padding: 30px 15px;
+            margin: 0;
+            list-style-type: none;
+            background: #fff;
+            height: 95%;
+            width: 290px;
+            overflow-y: scroll;
+            hr {
+                margin: 0 0 17px;
+            }
+        }
+        &__item {
+            @include paragraph;
+            margin-bottom: 17px;
+            &_active {
+                color: $secondary
+            }
+            a {
+                color: #000
+            }
+        }
+        &_hiden {
+            transform: translateX(-100vw);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .extra-menu {
+        top: 40px;
+        height: calc(100vh - 40px);
+    }
+}
