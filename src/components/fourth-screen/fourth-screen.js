@@ -9,9 +9,8 @@ import Spinner from '../spinner'
 import Button from '../button'
 import './fourth-screen.scss'
 
-const FourthScreen = ({set_modal}) => {
+const FourthScreen = ({set_modal, position}) => {
     const clientServise = new ClientServise()
-
     let inputNameStyle = 'input';
     let inputEmailStyle = 'input';
     let inputNumStyle = 'input';
@@ -95,7 +94,7 @@ const FourthScreen = ({set_modal}) => {
                     <span className='input__prompt'>Еnter phone number in open format</span>
 
                     <label>Select your position</label>
-                    <Radio chacked={chacked} setChacked={setChacked}/>
+                    <Radio chacked={chacked} setChacked={setChacked} position={position}/>
                     <label>Photo</label>
                     <input type="file" id='file' accept="image/*" 
                 ref={(inp) => setFileInp(inp)}
@@ -111,8 +110,9 @@ const FourthScreen = ({set_modal}) => {
         </section>
     )
 }
+const mapStateToProps = ({position}) => ({position})
 
-export default connect(null, actions)(FourthScreen);
+export default connect(mapStateToProps, actions)(FourthScreen);
 
 const frontPart = () => {
     return <React.Fragment>

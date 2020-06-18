@@ -2,7 +2,10 @@ import React from 'react';
 
 import './radio.scss'
 
-const Radio = ({chacked, setChacked}) => {
+const Radio = ({chacked, setChacked, position }) => {
+    if (!position) {
+        position = [{}, {}, {}, {}];
+    }
     const change = (e) => {
         setChacked(e.currentTarget.value);
     }
@@ -13,7 +16,7 @@ const Radio = ({chacked, setChacked}) => {
             <input type="radio" value="1" 
             checked={chacked === '1'} 
             onChange={change}/>
-            Frontend developer
+            {position[0].name}
             </label>
         </div>
         <div className="radio">
@@ -21,7 +24,7 @@ const Radio = ({chacked, setChacked}) => {
             <input type="radio" value="2" 
             checked={chacked === '2'}
             onChange={change}/>
-            Backend developer
+            {position[1].name}
             </label>
         </div>
         <div className="radio">
@@ -29,7 +32,7 @@ const Radio = ({chacked, setChacked}) => {
             <input type="radio" value="3" 
             checked={chacked === '3'}
             onChange={change}/>
-            Designer
+            {position[2].name}
             </label>
         </div>
         <div className="radio">
@@ -37,7 +40,7 @@ const Radio = ({chacked, setChacked}) => {
             <input type="radio" value="4" 
             checked={chacked === '4'}
             onChange={change}/>
-            QA
+            {position[3].name}
             </label>
         </div>
     </div>

@@ -15,13 +15,15 @@ import Modal from '../modal'
 import ExtraMenu from '../extra-menu';
 
 
-const App = ({more, max, getSize}) => {
+const App = ({more, max, getSize, set_position}) => {
     const clientServise = new ClientServise();
     useEffect(() => {
         clientServise.getUsers(getSize)
             .then(({users, total_users}) => { 
                 max(total_users)
                 more(users)})
+        clientServise.getPositions()
+                .then(({positions}) => set_position(positions))
     }, [getSize]);
     return (
         <div className="app">
