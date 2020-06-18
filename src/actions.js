@@ -16,3 +16,5 @@ export const max = (payload) => ({
     type: 'MAX',
     payload
 });
+
+export const set_modal = (payload) => ({type: 'MODAL', payload});

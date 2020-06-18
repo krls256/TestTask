@@ -12,3 +12,10 @@
 a {
     text-decoration: none;
 }
+
+@media (max-width: 576px) {
+    .text-button {
+        display: block;
+        text-align: center;
+    }
+}

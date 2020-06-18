@@ -3,7 +3,7 @@
 .card {
     width: 200px;
     text-align: center;
-    margin: 0 30px;
+    margin: 0 20px;
     &__img {
         display: block;
         margin: 0 auto;
@@ -56,6 +56,10 @@
             visibility: visible;
         }
     }
-    
+}
 
+@media (max-width: 768px) {
+    .card {
+        margin: 0;
+    }
 }

@@ -1,17 +1,21 @@
 @import '../../main.scss';
 .second {
-    padding: 158px 30px;
+    padding: 155px 50px;
     background-color: $background-1;
     &__header {
         @include heading-1;
         text-align: center;
         color: #212529;
+        margin: 0;
     }
     &__wrapper {
         display: flex;
         justify-content: center;
+        margin-top: 42px;
         img {
+            width: 340px;
             margin-right: 25px;
+            margin-top: 25px;
         }
     }
     &__text-wrapper {
@@ -22,5 +26,69 @@
     }
     &__paragraph {
         @include paragraph;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .second {
+        padding: 112px 30px;
+        &__header {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &__wrapper {
+            margin-top: 0;
+            img {
+                width: 247px;
+            }
+        }
+        &__text-wrapper {
+            margin-left: 5px;
+            margin-top: 35px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .second {
+        &__wrapper {
+            flex-direction: column;
+            img {
+                display: block;
+                margin: 20px auto 0;
+            }
+        }
+        &__subheader {
+            text-align: center;
+        }
+        &__paragraph {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .second {
+        padding: 80px 15px;
+        &__header {
+            font-size: 30px;
+            line-height: 50px;
+        }
+        &__wrapper {
+            img {
+                width: 289px;
+            }
+        }
+        &__subheader {
+            font-size: 24px;
+            line-height: 30px;
+            text-align: justify;
+        }
+        &__paragraph {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: justify;
+        }
     }
 }

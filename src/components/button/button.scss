@@ -24,4 +24,25 @@
     &-center {
         margin: 0 auto;
     }
+    &-modal {
+        width: 80px;
+        height: 38px;
+        float: right;
+        margin: 16px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .button {
+        &-modal {
+            margin: 6px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .button {
+        margin: 0 auto;
+    }
 }

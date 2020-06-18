@@ -4,8 +4,30 @@
     background-color: $background-1;
     position: sticky;
     top: 0;
-    height: 40px;
-    padding: 20px 30px;
+    min-height: 40px;
+    padding: 10px 25px 10px 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: 1;
+    &__burger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        position: fixed;
+        width: calc(100vw - 40px);
+        &__burger {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .menu {
+        padding: 0 25px 0 30px;
+    }
 }

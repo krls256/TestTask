@@ -18,7 +18,8 @@ module.exports = (env = {}) => {
             new HTMLWebpackPlugin({
                 title: 'Test task',
                 buildTime: new Date().toDateString(),
-                template: 'public/index.html'
+                template: 'public/index.html',
+                favicon: "./src/images/favicon-32x32.png"
             }),
         ]
         if (isProd) {
@@ -53,7 +54,7 @@ module.exports = (env = {}) => {
                 },
     
                 {
-                    test: /\.(png|jpg|jpeg|gif|ico|svg)$/,
+                    test: /\.(png|jpg|jpeg|gif|ico|svg|webP)$/,
                     use: [{
                         loader: "file-loader",
                         options: {

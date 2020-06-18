@@ -11,7 +11,7 @@ const ThirdScreen = ({maxSize, getSize, change_size}) => {
         change_size(maxSize)
     };
     const button = maxSize === getSize ? null : <Button text='Show more' 
-            className='third_button' fn={showMore}/>;
+            className='third_button' fn={showMore} show/>;
 
     return (
         <section className='third' id='third'>

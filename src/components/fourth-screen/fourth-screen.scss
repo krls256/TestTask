@@ -1,7 +1,7 @@
 @import '../../main.scss';
 
 .fourth {
-    padding: 158px 260px;
+    padding: 145px 240px 160px;
     background-color: $background-1;
     &__header {
         margin: 0;
@@ -12,11 +12,13 @@
         display: block;
         text-align: center;
         @include paragraph;
+        padding: 0 40px;
+        margin-bottom: 30px;
     }
 }
 
 .input {
-    margin-top: 14px;
+    margin-top: 8px;
     margin-bottom: 19px;
     display: block;
     width: 100%;
@@ -32,6 +34,15 @@
     }
     &-satisfied {
         box-shadow: 0 0 5px $secondary;
+    }
+    &__prompt {
+        font-size: 12px;
+        color: #212529;
+        display: block;
+        margin-bottom: 20px;
+    }
+    &:nth-child(6) {
+        margin-bottom: 6px;
     }
 }
 
@@ -51,6 +62,7 @@ input[type="file"] {
 .input-label {
     line-height: 38px;
     position: relative;
+    margin-bottom: 40px;
     cursor: pointer;
     span {
         text-align: center;
@@ -62,5 +74,46 @@ input[type="file"] {
         border-radius: 0 4px 4px 0;
         background-color: #f8f7f5;
         border: 1px solid #d4d9de;
+    }
+}
+
+.form__wrapper {
+    padding: 0 55px 0 40px;
+}
+
+
+@media (max-width: 768px) {
+    .fourth {
+        padding: 100px 150px 118px;
+        &__header {
+            font-size: 40px;
+        }
+        &__subheader {
+            padding: 0px;
+            margin-bottom: 20px;
+        }
+    }
+    .form__wrapper {
+        padding: 0 15px 0 0;
+    }
+}
+@media (max-width: 992px) {
+    .fourth {
+        padding: 130px 150px 130px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fourth {
+        padding: 80px 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .fourth {
+        &__header {
+            font-size: 30px;
+        }
+
     }
 }

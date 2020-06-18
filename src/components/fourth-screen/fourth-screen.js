@@ -9,7 +9,7 @@ import Spinner from '../spinner'
 import Button from '../button'
 import './fourth-screen.scss'
 
-const FourthScreen = ({restart}) => {
+const FourthScreen = ({set_modal}) => {
     const clientServise = new ClientServise()
 
     let inputNameStyle = 'input';
@@ -64,8 +64,8 @@ const FourthScreen = ({restart}) => {
                    if (body.success) {
                        clientServise.postUser(data, body.token)
                         .then(() => {
-                            restart();
                             setLoading(false)
+                            set_modal(true)
                         })
                    }
                 })
@@ -77,7 +77,7 @@ const FourthScreen = ({restart}) => {
         <section className='fourth' id='fourth'>
             {frontPart()}
             <form>
-                <div>
+                <div className='form__wrapper'>
                     <label>Name</label>
                     <input type='text' placeholder='Your name' className={inputNameStyle}
                     onInput={(e) => setName(e.currentTarget.value)}
@@ -92,17 +92,20 @@ const FourthScreen = ({restart}) => {
                     <input type='tel' placeholder='+380 XX XXX XX XX' className={inputNumStyle}
                     onInput={(e) => setNum(e.currentTarget.value)}
                     onFocus={() => setFocusedNum(true)}/> 
+                    <span className='input__prompt'>Еnter phone number in open format</span>
 
                     <label>Select your position</label>
                     <Radio chacked={chacked} setChacked={setChacked}/>
-                </div>
-                <input type="file" id='file' accept="image/*" 
+                    <label>Photo</label>
+                    <input type="file" id='file' accept="image/*" 
                 ref={(inp) => setFileInp(inp)}
                 onChange={() => setFile(fileInp.files[fileInp.files.length - 1])}/>
                 <label htmlFor='file' className={inputFileStyle}>
                     {fileLabelText}
                     <span>Browse</span>
                 </label>
+                </div>
+               
                 {button}
             </form>
         </section>

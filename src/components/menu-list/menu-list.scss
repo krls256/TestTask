@@ -1,7 +1,11 @@
 @import '../../main.scss';
-.menu__list {
+
+.menu-list {
     list-style-type: none;
     display: flex;
+    &__invisible {
+        display: none;
+    }
     li {
         margin-left: 30px;
         cursor: pointer;
@@ -19,5 +23,49 @@
             }
             
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-list {
+        transition: all .5s;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 290px;
+        height: calc(100vh - 80px);
+        margin-top: 30px;
+        background-color: #fff;
+        justify-content: start;
+        padding: 30px 15px;
+        margin: 0;
+        overflow-y: scroll;
+        z-index: 2;
+        &_hidden {
+            transform: translateX(-100vw);
+        }
+        &__invisible {
+            display: block;
+            hr {
+                margin: 0 0 17px;
+            }
+        }
+        li {
+            margin: 0 0 18px 0;
+            a{
+                @include paragraph;
+                &:hover {
+                    color: #212529;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .menu-list {
+        top: 40px;
+        height: calc(100vh - 40px);        
     }
 }
